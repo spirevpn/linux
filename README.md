@@ -1,15 +1,15 @@
 # SpireVPN для Linux
 
-Первый публичный выпуск — **0.7.0**. Ubuntu **26.04 x64 (amd64)**.
+Текущая версия — **0.7.1**. Ubuntu **26.04 x64 (amd64)**.
 
 [Скачать последнюю версию](https://github.com/spirevpn/linux/releases/latest)
 
 ## Установка
 
-Скачайте `spirevpn_0.7.0_amd64.deb` из Assets релиза и выполните в папке загрузки:
+Скачайте `spirevpn_0.7.1_amd64.deb` из Assets релиза и выполните в папке загрузки:
 
 ```bash
-sudo apt install ./spirevpn_0.7.0_amd64.deb
+sudo apt install ./spirevpn_0.7.1_amd64.deb
 sudo spirevpn-allow-user "$USER"
 ```
 
@@ -31,7 +31,7 @@ GUI работает без root. VPN обслуживает отдельная 
 
 ## Проверка пакета
 
-Релиз содержит пакет `.deb`, подписанный манифест `SpireVPN-0.7.0-update.json`, подпись `.sig` и `SHA256SUMS`.
+Релиз содержит пакет `.deb`, подписанный манифест `SpireVPN-0.7.1-update.json`, подпись `.sig` и `SHA256SUMS`.
 
 ```bash
 sha256sum -c SHA256SUMS
