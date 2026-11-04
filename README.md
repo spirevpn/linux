@@ -1,14 +1,14 @@
 # SpireVPN для Linux
 
-Текущая версия — **0.8.0**.
+Текущая версия — **0.8.1**.
 
 [Скачать последнюю версию](https://github.com/spirevpn/linux/releases/latest)
 
 | Система | Пакет |
 |---|---|
-| Ubuntu 26.04 x64 | `spirevpn_0.8.0_amd64.deb` |
-| Ubuntu 26.04 ARM64 | `spirevpn_0.8.0_arm64.deb` |
-| Fedora Workstation 44 x64 | `spirevpn-0.8.0-1.x86_64.rpm` |
+| Ubuntu 26.04 x64 | `spirevpn_0.8.1_amd64.deb` |
+| Ubuntu 26.04 ARM64 | `spirevpn_0.8.1_arm64.deb` |
+| Fedora Workstation 44 x64 | `spirevpn-0.8.1-1.x86_64.rpm` |
 
 ARM64 и Fedora — начальная поддержка. ARM64 проверен под QEMU, без проверки на реальном оборудовании. Fedora проверена в контейнере; SELinux, systemd/Wayland и реальное VPN-соединение на Fedora-ВМ ещё требуют проверки. Fedora Atomic (Silverblue/Kinoite и другие) этим установщиком не поддерживается.
 
@@ -19,20 +19,22 @@ ARM64 и Fedora — начальная поддержка. ARM64 провере�
 Отключите VPN и закройте приложение. Скачайте нужный пакет из Assets релиза. Ubuntu x64:
 
 ```bash
-sudo apt install ./spirevpn_0.8.0_amd64.deb
+sudo apt install ./spirevpn_0.8.1_amd64.deb
 sudo spirevpn-allow-user "$USER"
 ```
 
-Для Ubuntu ARM64 используйте `spirevpn_0.8.0_arm64.deb`. Fedora Workstation x64:
+Для Ubuntu ARM64 используйте `spirevpn_0.8.1_arm64.deb`. Fedora Workstation x64:
 
 ```bash
-sudo dnf install ./spirevpn-0.8.0-1.x86_64.rpm
+sudo dnf install ./spirevpn-0.8.1-1.x86_64.rpm
 sudo spirevpn-allow-user "$USER"
 ```
 
 После первого добавления пользователя в группу `spirevpn` выйдите из сеанса рабочего стола и войдите снова. Запускайте SpireVPN из меню приложений или командой `spirevpn` от обычного пользователя, без sudo. SELinux отключать не нужно.
 
 Если ранее использовали пользовательскую тестовую сборку, выполните `spirevpn-migrate-user` от своего пользователя: прежние ярлыки будут запускать установленный пакет. Вход и настройки сохраняются.
+
+В 0.8.1 иконки Solar Bold Duotone заменены на Solar Bold; контурные иконки сохранены. Solar — 480 Design, CC BY 4.0 ([источник](https://www.figma.com/community/file/1166831539721848736)).
 
 ## Возможности
 
@@ -50,9 +52,9 @@ GUI работает без root. VPN обслуживает отдельная 
 
 Релиз содержит три пакета, подписанные манифесты обновления, подписи `.sig` и `SHA256SUMS`:
 
-- Ubuntu x64: `SpireVPN-0.8.0-update.json`.
-- Ubuntu ARM64: `SpireVPN-0.8.0-arm64-update.json`.
-- Fedora x64: `SpireVPN-0.8.0-amd64-rpm-update.json`.
+- Ubuntu x64: `SpireVPN-0.8.1-update.json`.
+- Ubuntu ARM64: `SpireVPN-0.8.1-arm64-update.json`.
+- Fedora x64: `SpireVPN-0.8.1-amd64-rpm-update.json`.
 
 ```bash
 sha256sum --ignore-missing -c SHA256SUMS
